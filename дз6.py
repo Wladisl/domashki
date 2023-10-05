@@ -64,7 +64,7 @@ def get_age():
 def age_format(age):
     if age % 10 == 1 and age % 100 != 11:
         return f'{age} рік'
-    elif 2 <= age % 10 <= 4 and age % 100 < 10:
+    elif 2 <= age % 10 <= 4 and (age % 100 < 10 or age % 100 >= 20):
         return f'{age} роки'
     else:
         return f'{age} років'
