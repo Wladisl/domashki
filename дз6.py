@@ -52,8 +52,7 @@ print(result3)
 # "Вам 81 рік? Покажіть пенсійне посвідчення!"
 # "Незважаючи на те, що вам 42 роки, білетів всеодно нема!"
 
-
-def get_age():
+def get_number():
     try:
         age = int(input('Введіть свій вік: '))
         return age
@@ -61,7 +60,7 @@ def get_age():
         print('Введене значення не є цілим числом')
 
 
-def age_format(age):
+def answer_ending(age):
     if age % 10 == 1 and age % 100 != 11:
         return f'{age} рік'
     elif 2 <= age % 10 <= 4 and (age % 100 < 10 or age % 100 >= 20):
@@ -71,21 +70,22 @@ def age_format(age):
 
 
 def program_cashier():
-    age = get_age()
+    age = get_number()
 
     if age is not None:
+        age_format = answer_ending(age)
         if '7' in str(age):
-            print(f'Вам {age_format(age)}, вам пощастить')
+            print(f'Вам {age_format}, вам пощастить')
         elif age == 0:
-            print(f'Вам {age_format(age)}, ви ще не народились')
+            print(f'Вам {age_format}, ви ще не народились')
         elif age < 7:
-            print(f'Тобі ж {age_format(age)}! Де твої батьки?')
+            print(f'Тобі ж {age_format}! Де твої батьки?')
         elif age < 16:
-            print(f'Тобі лише {age_format(age)}, а це фільм для дорослих!')
+            print(f'Тобі лише {age_format}, а це фільм для дорослих!')
         elif age > 65:
-            print(f'Вам {age_format(age)}? Покажіть пенсійне посвідчення!')
+            print(f'Вам {age_format}? Покажіть пенсійне посвідчення!')
         else:
-            print(f'Незважаючи на те, що вам {age_format(age)}, білетів всеодно нема!"')
+            print(f'Незважаючи на те, що вам {age_format}, білетів всеодно нема!"')
 
 
 program_cashier()
