@@ -13,7 +13,7 @@ class Car(Vehicle):
         self.max_speed = new_speed
         self.seats = new_seats
 
-    def object_information(self):
+    def object_information_car(self):
         print(f'Car brand -> {self.brand}, year published -> {self.year}, max speed -> {self.max_speed} km/h, max seats -> {self.seats}')
 
 
@@ -26,7 +26,7 @@ class Airplane(Vehicle):
         self.max_speed = new_speed
         self.wingspan = new_wingspan
 
-    def object_information(self):
+    def object_information_airplane(self):
         print(f'Airplane name -> {self.brand}, year published -> {self.year}, max speed -> {self.max_speed} km/h, max wingspan -> {self.wingspan}m')
 
 
@@ -39,15 +39,15 @@ class Ship(Vehicle):
         self.max_speed = new_speed
         self.tonnage = new_tonnage
 
-    def object_information(self):
+    def object_information_ship(self):
         print(f'Ship name -> {self.brand}, year published -> {self.year}, max speed -> {self.max_speed} m/s, max tonnage -> {self.tonnage} ton')
 
 
 my_car = Car('Toyota', 2017, 230, 8)
-my_car.object_information()
+my_car.object_information_car()
 
 my_airplane = Airplane('F-16', 1974, 2120, 9.96)
-my_airplane.object_information()
+my_airplane.object_information_airplane()
 
 my_ship = Ship('Titanic', 1911, 23, 564763)
-my_ship.object_information()
+my_ship.object_information_ship()
