@@ -131,9 +131,9 @@ class RSPGame:
         if f1 == f2:
             print('Draw')
         elif f1 > f2:
-            print(f'Player {self.player1.name} wins with {f1.name}')
+            print(f'Player {self.player1.name} wins player {self.player2.name} with {f1.name}')
         else:
-            print(f'Player {self.player2.name} wins with {f2.name}')
+            print(f'Player {self.player2.name} wins player {self.player1.name} with {f2.name}')
 
     def play_3_times(self):
         print(f'{self.game_name} started for 3 time play')
