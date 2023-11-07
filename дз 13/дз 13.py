@@ -8,7 +8,7 @@ def get_exchange_rates():
 
 
 def save_to_file(data, date, filename):
-    with open(filename, "w") as file:
+    with open(filename, "w", encoding='utf-8') as file:
         file.write(f"[Date for course]: {date}\n")
         for currency in data:
             name = currency["txt"]
